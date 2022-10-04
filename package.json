@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/kokhoui83/sample-app-server#readme",
   "dependencies": {
     "@hapi/hapi": "^20.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
   }
 }
