@@ -4,6 +4,7 @@
   "description": "Sample App Server",
   "main": "index.js",
   "scripts": {
+    "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kokhoui83/sample-app-server/issues"
   },
-  "homepage": "https://github.com/kokhoui83/sample-app-server#readme"
+  "homepage": "https://github.com/kokhoui83/sample-app-server#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2"
+  }
 }
