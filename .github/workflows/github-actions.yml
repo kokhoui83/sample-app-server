@@ -27,6 +27,7 @@ jobs:
     - run: npm test
 
   docker_image:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
