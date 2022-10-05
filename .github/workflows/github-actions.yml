@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 run-name: ${{ github.actor }} is building, testing, packaging and deploying 🚀
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ main ]
 
 jobs:
   build:
