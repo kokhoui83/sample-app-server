@@ -1,0 +1,26 @@
+{
+  "name": "sample-app-server",
+  "version": "1.0.0",
+  "description": "Sample App Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kokhoui83/sample-app-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kokhoui83/sample-app-server/issues"
+  },
+  "homepage": "https://github.com/kokhoui83/sample-app-server#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}
