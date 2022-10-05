@@ -1,5 +1,5 @@
 # sample-app-server
-Sample App Server
+Sample App Server build using node and hapi
 
 ## Requirement
 - Node 18.x
