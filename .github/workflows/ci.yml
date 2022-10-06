@@ -1,7 +1,6 @@
 name: CI Pipeline
 run-name: ${{ github.actor }} is building and testing 🚀
 on:
-  workflow_dispatch:
   pull_request:
     branches: [ main ]
 

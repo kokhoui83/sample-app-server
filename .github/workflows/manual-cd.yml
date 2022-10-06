@@ -1,8 +1,7 @@
-name: CD Pipeline
+name: Manual CD Pipeline
 run-name: ${{ github.actor }} is building, testing, packaging and deploying 🚀
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
