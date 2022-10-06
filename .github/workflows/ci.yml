@@ -1,6 +1,7 @@
 name: CI/CD Pipeline
 run-name: ${{ github.actor }} is building and testing 🚀
 on:
+  workflow_dispatch:
   pull_request:
     branches: [ main ]
 
@@ -14,12 +15,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - name: checkout code
+      uses: actions/checkout@v3
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+      run: npm ci
+      run: npm run build --if-present
+      run: npm test
