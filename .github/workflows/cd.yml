@@ -2,6 +2,7 @@ name: CI/CD Pipeline
 run-name: ${{ github.actor }} is building, testing, packaging and deploying 🚀
 on:
   push:
+    workflow_dispatch:
     branches: [ main ]
 
 jobs:
@@ -22,9 +23,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      run: npm ci
-      run: npm run build --if-present
-      run: npm test
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
 
   docker_image:
     needs: build
