@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CD Pipeline
 run-name: ${{ github.actor }} is building, testing, packaging and deploying 🚀
 on:
   push:
