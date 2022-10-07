@@ -2,6 +2,7 @@
 
 const Hapi = require('@hapi/hapi')
 const ping = require('./routes/ping')
+const qoutes = require('./routes/qoutes')
 
 const init = async () => {
     const server = Hapi.server({
@@ -10,6 +11,7 @@ const init = async () => {
     })
 
     server.route(ping.ping)
+    server.route(qoutes.getQoute)
 
     await server.start()
     console.log(`Server running on ${server.info.uri}`)
