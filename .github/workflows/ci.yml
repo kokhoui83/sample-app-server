@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 run-name: ${{ github.actor }} is building and testing 🚀
 on:
   pull_request:
