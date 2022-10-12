@@ -1,4 +1,4 @@
-name: CD
+name: CD Pipeline
 run-name: ${{ github.actor }} is building and packaging 🚀
 
 on:
@@ -25,6 +25,7 @@ jobs:
       if: ${{ success() }}
       uses: docker/build-push-action@v3
       with:
+        platforms: linux/amd64,linux/arm64
         push: true # Will only build if this is not here
         tags: |
           ghcr.io/${{ github.repository }}:latest
